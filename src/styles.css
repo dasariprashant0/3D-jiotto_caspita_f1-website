@@ -1,17 +1,95 @@
-body {
-  font-family: sans-serif;
-  overflow: hidden;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --red: #fe4443;
+  --grey: #f0efef;
+  --grey2: #6e6e6e;
+  --lightBlack: #464955;
+  --black: #13222a;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 2px;
+}
+
+#webgi-canvas-container{
+  width: 100%;
+  height:100%;
+}
+
 #webgi-canvas {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
-}
-#webgi-canvas-container{
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh 10vw;
-  border-radius: 0.5rem;
+  position: fixed;
+  top: 0;
 
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rotation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background-color: var(--grey);
+  font-family: "Orbitron", sans-serif;
+  color: var(--red);
+  display: none;
+}
+
+.rotation p {
+  width: 80%;
+}
+
+.loader {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: var(--grey);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+  font-size: 14px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.progress {
+  position: absolute;
+  top: 60%;
+  width: 50%;
+  height: 1px;
+  background: var(--red);
+  transform: scaleX(0);
+  transition: transform 1s;
+  transform-origin: left;
+  z-index: 10;
+  margin: 0 50%;
 }

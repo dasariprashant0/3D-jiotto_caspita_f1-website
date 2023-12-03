@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Jiotto Caspita F1</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
 
-<head>
-	<title>WebGi starter</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-</head>
+  <body>
+    <div id="webgi-canvas-container">
+      <canvas id="webgi-canvas"> </canvas>
+      <div class="rotation">
+        <p>Please Rotate your device to see the Product</p>
+      </div>
+      <div class="loader">
+        <p>Loading... Please Wait</p>
+        <div class="progress"></div>
+      </div>
+    </div>
 
-<body>
-	<div id="webgi-canvas-container">
-		<canvas id="webgi-canvas"></canvas>
-	</div>
-
-	<script src="src/index.ts" type="module"></script>
-</body>
-
+    <script src="src/index.js" type="module"></script>
+  </body>
 </html>
