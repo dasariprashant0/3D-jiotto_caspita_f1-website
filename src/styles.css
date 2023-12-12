@@ -140,13 +140,13 @@ main {
 }
 
 .first h3 {
-  color: var(--grey);
+  color: lightgrey;
   position: absolute;
   font-size: 9vw;
   white-space: nowrap;
   z-index: -1;
   text-transform: uppercase;
-  top: 50%;
+  top: 60%;
 }
 
 .section--one--container2 {
